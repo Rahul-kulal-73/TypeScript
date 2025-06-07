@@ -112,3 +112,68 @@ if (typeof data === "string") {
 | **Can assign any value**              | ✅ Yes                  | ✅ Yes                                     |
 | **Can access properties/methods directly** | ✅ Yes, no checks       | ❌ No, must do type checking first         |
 | **Use case**                           | Quick fix, unsafe code | Safer version of `any`, needs type checks |
+
+
+
+## void Data Type in TypeScript
+```ts
+function abcs(): void {
+  console.log("hey");
+}
+```
+When a function does not return any value, its return type should be marked as `void`.
+This tells TypeScript that the function does not return anything.
+
+## string,number,boolean
+```ts
+function getAge(): number {
+  return 25;
+}
+//above will return number
+function getName(): string {
+  return "Rahul";
+}
+// above will return string
+
+function isAdult(age: number): boolean {
+  return age >= 18;
+}
+// above will return boolean
+```
+
+## null Data Type in TypeScript
+`null` represents an intentional absence of any value.
+```ts
+let data: null = null;
+```
+Usually, you want a variable to be a type or null:
+```ts
+let name: string | null = null;
+name = "Rahul";  // OK
+name = null;     // OK
+```
+
+## undefined Data Type in TypeScript
+`undefined` means a variable has been declared but not assigned a value yet.
+```ts
+let data: undefined = undefined;
+```
+This means data can only be undefined. It cannot have any other value.
+
+Usually, you want a variable to be a type or `undefined`:
+```ts
+let age: number | undefined;
+
+age = 25;         // OK
+age = undefined;  // OK
+```
+
+
+## never Data Type in TypeScript
+The `never` type represents values that never occur.
+It is used for functions or expressions that never return or always throw an error.
+```ts
+function infiniteLoop(): never {
+  while (true) {}
+}
+```
