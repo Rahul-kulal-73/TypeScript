@@ -55,7 +55,7 @@ constructor(public name: string, public age: number)
 this.name = name;
 this.age = age;
 ```
-## In TypeScript, you can call another method from within a method using this:
+## In TypeScript, you can call another method from within a method using `this`:
 ```ts
 class Person {
   constructor(public name: string) {}
